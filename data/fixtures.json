@@ -1,0 +1,209 @@
+{
+  "snapshot_time": "2026-04-21T09:00:00+00:00",
+  "users": {
+    "e001": {
+      "name": "林悦 / Lin Yue",
+      "department": "Data Engineering",
+      "office": "Shanghai",
+      "device": "Windows 11",
+      "client": "ConnectSecure 5.1",
+      "vpn_access": true,
+      "groups": [
+        "vpn-employees",
+        "grafana-readers"
+      ]
+    },
+    "e002": {
+      "name": "Alex Chen",
+      "department": "Commercial",
+      "office": "Chicago",
+      "device": "macOS 14",
+      "client": "ConnectSecure 5.2",
+      "vpn_access": true,
+      "groups": [
+        "vpn-employees"
+      ]
+    },
+    "e003": {
+      "name": "王宁 / Wang Ning",
+      "department": "Data Engineering",
+      "office": "Shanghai",
+      "device": "Windows 11",
+      "client": "ConnectSecure 5.2",
+      "vpn_access": false,
+      "groups": []
+    }
+  },
+  "status": {
+    "vpn": {
+      "id": "STATUS-VPN",
+      "service": "vpn",
+      "health": "operational",
+      "observed_at": "2026-04-21T08:58:00+00:00",
+      "scope": "global",
+      "message": "No active VPN incident in this synthetic snapshot.",
+      "changes": [
+        "CHG-0418: gateway certificate rotation completed; no confirmed causal link to current issues."
+      ]
+    },
+    "identity": {
+      "id": "STATUS-ID",
+      "service": "identity",
+      "health": "operational",
+      "observed_at": "2026-04-21T08:57:00+00:00",
+      "scope": "global",
+      "message": "Identity service available in this synthetic snapshot.",
+      "changes": []
+    }
+  },
+  "articles": [
+    {
+      "id": "KB-VPN-001",
+      "title": "Intermittent VPN disconnects on remote networks / 远程网络 VPN 间歇断线",
+      "issue": "vpn",
+      "tags": [
+        "vpn",
+        "disconnect",
+        "断线",
+        "掉线",
+        "remote",
+        "远程",
+        "10",
+        "15"
+      ],
+      "platforms": [
+        "Windows 11",
+        "macOS 14"
+      ],
+      "reviewed_at": "2026-04-15",
+      "supersedes": [],
+      "action": "network_isolation",
+      "steps": [
+        "先保存手头的工作。如果公司规定和手机套餐允许，可以临时切到手机热点，再连上 VPN。",
+        "观察 15 分钟，看看还会不会断线，顺便试一下内网能不能打开。不要关闭安全防护，也不用修改安全设置。"
+      ],
+      "success": "VPN stays connected for the observation period and the required internal application opens.",
+      "scope": "A reversible isolation check; does not establish a root cause."
+    },
+    {
+      "id": "KB-VPN-002",
+      "title": "VPN connected, internal sites unavailable / VPN 已连接但内网站点打不开",
+      "issue": "internal",
+      "tags": [
+        "internal",
+        "dns",
+        "内网",
+        "打不开",
+        "connected",
+        "已连接",
+        "grafana"
+      ],
+      "platforms": [
+        "Windows 11",
+        "macOS 14"
+      ],
+      "reviewed_at": "2026-04-16",
+      "supersedes": [],
+      "action": "reconnect",
+      "steps": [
+        "先保存手头的工作，再用公司批准的 VPN 客户端断开并重新连接。",
+        "重新打开刚才用不了的内网应用，再试另一个内网应用。把结果和报错告诉我，注意不要发送令牌或私有链接。"
+      ],
+      "success": "The user confirms access to the required internal application.",
+      "scope": "Does not grant missing application permissions."
+    },
+    {
+      "id": "KB-AUTH-001",
+      "title": "Account sign-in triage / 账号登录初步排查",
+      "issue": "account",
+      "tags": [
+        "okta",
+        "login",
+        "登录",
+        "account",
+        "password",
+        "密码",
+        "mfa"
+      ],
+      "platforms": [
+        "Windows 11",
+        "macOS 14"
+      ],
+      "reviewed_at": "2026-04-16",
+      "supersedes": [],
+      "action": "identity_check",
+      "steps": [
+        "从已保存的公司书签打开登录页面，看看有没有“账号已锁定”之类的提示。",
+        "告诉我显示的是哪类错误就行，不要发送密码、验证码、恢复码或会话令牌。"
+      ],
+      "success": "User confirms sign-in succeeds; locked accounts require identity support.",
+      "scope": "No automatic password reset or MFA bypass."
+    },
+    {
+      "id": "KB-LEGACY-009",
+      "title": "Retired legacy VPN workaround / 已退役的旧 VPN 方案",
+      "issue": "vpn",
+      "tags": [
+        "vpn",
+        "disconnect",
+        "断线"
+      ],
+      "platforms": [
+        "Windows 11"
+      ],
+      "reviewed_at": "2024-01-01",
+      "supersedes": [],
+      "action": "unsafe_legacy",
+      "retired": true,
+      "steps": [
+        "Retired article: formerly suggested disabling endpoint protection. Do not follow."
+      ],
+      "success": "Not applicable",
+      "scope": "Archived; must never be used."
+    }
+  ],
+  "history": [
+    {
+      "id": "HIST-021",
+      "issue": "vpn",
+      "symptoms": "Disconnect every 15 minutes on home Wi-Fi",
+      "resolution": "Stable on hotspot; network team later confirmed home-router instability.",
+      "caveat": "Similarity is not proof; perform isolation first."
+    },
+    {
+      "id": "HIST-022",
+      "issue": "internal",
+      "symptoms": "VPN connected but internal dashboard unavailable",
+      "resolution": "Reconnect restored corporate DNS in one case.",
+      "caveat": "Could also be service outage or missing permissions."
+    },
+    {
+      "id": "HIST-023",
+      "issue": "account",
+      "symptoms": "Repeated Okta login failure after password reset",
+      "resolution": "Identity team unlocked account after verified identity.",
+      "caveat": "Agent cannot unlock accounts or verify identity in this demo."
+    }
+  ],
+  "policy": {
+    "id": "POLICY-001",
+    "version": "2026-04-21",
+    "allowed_actions": [
+      "network_isolation",
+      "reconnect",
+      "identity_check"
+    ],
+    "approval_required": [
+      "grant_access",
+      "reset_password",
+      "unlock_account"
+    ],
+    "denied_actions": [
+      "disable_security",
+      "bypass_mfa",
+      "unsafe_legacy"
+    ],
+    "max_guidance_attempts": 2,
+    "status_ttl_seconds": 600
+  }
+}
