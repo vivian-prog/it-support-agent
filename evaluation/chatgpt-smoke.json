@@ -1,0 +1,71 @@
+{
+  "mode": "chatgpt",
+  "model": "gpt-6.1-sol",
+  "query": "我在家远程办公，用公司 Windows 电脑，VPN 每隔十几分钟就断线，今天上午开始。请查一下我的 VPN 权限、服务状态、相关排查资料和类似案例，再给我一个允许执行的排查方法。",
+  "decision": "guide",
+  "duration_seconds": 15.75,
+  "metrics": {
+    "turns": 1,
+    "tool_calls": 7,
+    "model_calls": 4,
+    "input_tokens": 5093,
+    "output_tokens": 192
+  },
+  "tools": [
+    {
+      "name": "set_context",
+      "source": "model",
+      "ok": true
+    },
+    {
+      "name": "get_profile",
+      "source": "model",
+      "ok": true
+    },
+    {
+      "name": "check_status",
+      "source": "model",
+      "ok": true
+    },
+    {
+      "name": "search_kb",
+      "source": "model",
+      "ok": true
+    },
+    {
+      "name": "search_history",
+      "source": "model",
+      "ok": true
+    },
+    {
+      "name": "check_policy",
+      "source": "model",
+      "ok": true
+    },
+    {
+      "name": "finish",
+      "source": "model",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "reply": {
+    "decision": "guide",
+    "text": "先按下面的方法试一下，看看问题有没有变化。现在还不能确定原因，试完把结果告诉我。",
+    "steps": [
+      "先保存手头的工作。如果公司规定和手机套餐允许，可以临时切到手机热点，再连上 VPN。",
+      "观察 15 分钟，看看还会不会断线，顺便试一下内网能不能打开。不要关闭安全防护，也不用修改安全设置。"
+    ],
+    "article_id": "KB-VPN-001",
+    "success_criteria": "VPN stays connected for the observation period and the required internal application opens.",
+    "evidence_ids": [
+      "USER-e001",
+      "STATUS-VPN",
+      "KB-VPN-001",
+      "HIST-021",
+      "POLICY-001"
+    ],
+    "confidence": "等你试完反馈",
+    "duration_ms": 15745.26
+  }
+}

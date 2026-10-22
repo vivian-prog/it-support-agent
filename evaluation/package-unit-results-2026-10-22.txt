@@ -1,0 +1,49 @@
+test_checking_vpn_permission_is_not_an_access_grant_request (test_agent.AgentTests) ... ok
+test_forged_article_blocked (test_agent.AgentTests) ... ok
+test_guidance_requires_evidence (test_agent.AgentTests) ... ok
+test_handoff_context_priority_and_outcomes (test_agent.AgentTests) ... ok
+test_handoff_idempotent (test_agent.AgentTests) ... ok
+test_location_not_inferred_from_office (test_agent.AgentTests) ... ok
+test_model_cannot_invent_fix_or_close (test_agent.AgentTests) ... ok
+test_model_escalation_reason_cannot_smuggle_instructions (test_agent.AgentTests) ... ok
+test_model_failure_is_explicit (test_agent.AgentTests) ... ok
+test_model_injected_tools_denied (test_agent.AgentTests) ... ok
+test_model_loop_bounded (test_agent.AgentTests) ... ok
+test_natural_recovery_preserves_network_issue_and_attempts (test_agent.AgentTests) ... ok
+test_real_protocol_loop_and_history_with_fake_transport (test_agent.AgentTests) ... ok
+test_redact_before_storage (test_agent.AgentTests) ... ok
+test_repeated_guidance_blocked (test_agent.AgentTests) ... ok
+test_resolution_requires_explicit_confirmation (test_agent.AgentTests) ... ok
+test_scope_change_clears_stale_evidence (test_agent.AgentTests) ... ok
+test_session_isolation (test_agent.AgentTests) ... ok
+test_sqlite_restart (test_agent.AgentTests) ... ok
+test_success_confirmation_rejects_failure_hypothesis_and_question (test_agent.AgentTests) ... ok
+test_tool_allowlist_and_identity_boundary (test_agent.AgentTests) ... ok
+test_unknown_action_default_denied (test_agent.AgentTests) ... ok
+test_denial_does_not_exchange_code (test_chatgpt.OAuthTests) ... ok
+test_id_signature_issuer_audience_nonce_and_expiration (test_chatgpt.OAuthTests) ... ok
+test_model_catalog_and_selection_validate_account (test_chatgpt.OAuthTests) ... ok
+test_pkce_scope_callback_and_protected_storage (test_chatgpt.OAuthTests) ... ok
+test_refresh_rotation_and_scope_omission (test_chatgpt.OAuthTests) ... ok
+test_returning_client_and_verified_identity_are_pinned (test_chatgpt.OAuthTests) ... ok
+test_signout_clears_tokens_and_retains_registration (test_chatgpt.OAuthTests) ... ok
+test_token_scope_not_callback_scope_controls_inference (test_chatgpt.OAuthTests) ... ok
+test_transient_refresh_preserves_credentials_terminal_clears (test_chatgpt.OAuthTests) ... ok
+test_wrong_binding_expired_and_replayed_callbacks_rejected (test_chatgpt.OAuthTests) ... ok
+test_chatgpt_contract_separate_from_api_key (test_chatgpt.StreamTests) ... ok
+test_completed_empty_output_uses_finalized_streamed_items (test_chatgpt.StreamTests) ... ok
+test_completed_output_only (test_chatgpt.StreamTests) ... ok
+test_incomplete_and_quota_error_never_look_successful (test_chatgpt.StreamTests) ... ok
+test_quota_error_does_not_retry (test_chatgpt.StreamTests) ... ok
+test_repeated_transport_failure_is_bounded (test_chatgpt.StreamTests) ... ok
+test_transport_timeout_retries_once_and_requires_completion (test_chatgpt.StreamTests) ... ok
+test_cookie_roundtrip_and_handoff (test_http.HTTPTests) ... ok
+test_cross_origin_and_dns_rebinding_blocked (test_http.HTTPTests) ... ok
+test_other_client_cannot_read_session (test_http.HTTPTests) ... ok
+test_static_headers_and_no_path_traversal (test_http.HTTPTests) ... ok
+test_unbounded_and_invalid_input_rejected (test_http.HTTPTests) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.576s
+
+OK

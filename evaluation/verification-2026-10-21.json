@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-21T23:40:53.911392+08:00",
+  "unit_integration": {
+    "passed": 39,
+    "total": 39
+  },
+  "deterministic_scenarios": {
+    "passed": 19,
+    "total": 19
+  },
+  "live_scenarios": [
+    {
+      "id": "vpn_guide_and_handoff",
+      "lab": "normal",
+      "query": "我在家远程办公，用公司 Windows 电脑，VPN 每隔十几分钟就断线，今天上午开始。请查一下我的 VPN 权限、服务状态、相关排查资料和类似案例，再给我一个允许执行的排查方法。",
+      "passed": true,
+      "checks": {
+        "initial_guide": true,
+        "required_model_tools": true,
+        "final_escalation": true,
+        "attempt_preserved": true,
+        "failure_feedback_preserved": true,
+        "sources_preserved": true,
+        "transcript_preserved": true,
+        "local_not_sent": true
+      },
+      "initial_decision": "guide",
+      "final_decision": "escalate",
+      "model": "gpt-6.1-sol",
+      "metrics": {
+        "turns": 2,
+        "tool_calls": 7,
+        "model_calls": 4,
+        "input_tokens": 5059,
+        "output_tokens": 175
+      },
+      "model_tools": [
+        "set_context",
+        "get_profile",
+        "check_status",
+        "search_kb",
+        "search_history",
+        "check_policy",
+        "finish"
+      ],
+      "tool_errors": [],
+      "final_text": "收到，这次转人工处理。\n问题和排查记录已经整理好了，还没发给 IT。你可以下载后交给支持人员。",
+      "duration_seconds": 22.94
+    },
+    {
+      "id": "vpn_known_outage",
+      "lab": "outage",
+      "query": "我在家远程办公，用公司 Windows 电脑，VPN 每隔十几分钟就断线，今天上午开始。请查一下我的 VPN 权限、服务状态、相关排查资料和类似案例，再给我一个允许执行的排查方法。",
+      "passed": true,
+      "checks": {
+        "escalated": true,
+        "model_checked_status": true,
+        "outage_seen": true,
+        "no_local_steps": true,
+        "handoff_created": true
+      },
+      "initial_decision": "escalate",
+      "final_decision": "escalate",
+      "model": "gpt-6.1-sol",
+      "metrics": {
+        "turns": 1,
+        "tool_calls": 7,
+        "model_calls": 3,
+        "input_tokens": 4158,
+        "output_tokens": 184
+      },
+      "model_tools": [
+        "set_context",
+        "get_profile",
+        "check_status",
+        "search_kb",
+        "search_history",
+        "check_policy",
+        "finish"
+      ],
+      "tool_errors": [],
+      "final_text": "查到 VPN 服务正在出故障。这种情况需要负责团队处理，先不用反复改本地设置。\n问题和排查记录已经整理好了，还没发给 IT。你可以下载后交给支持人员。",
+      "duration_seconds": 16.12
+    }
+  ],
+  "scope": "Synthetic data. Real ChatGPT plan inference; no actual IT systems or external handoff.",
+  "live_passed": 2,
+  "live_total": 2
+}
