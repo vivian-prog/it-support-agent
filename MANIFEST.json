@@ -1,0 +1,248 @@
+{
+  "package": "IT Companion — Employee IT Support Agent",
+  "date": "2026-10-22",
+  "algorithm": "SHA-256",
+  "note": "Hashes cover every packaged file except MANIFEST.json itself. Credentials and runtime data are excluded.",
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 263,
+      "sha256": "c2e52447b5ab1b67cc7a418bc741edbd189bb6734b1a0e9925fc90a511848b8a"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 50,
+      "sha256": "0c3e4b131c097fbf41491d1a389ad0166d6699f7f95b0778e9651185661cd91c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 21482,
+      "sha256": "85ab138ae8c7467321c925c6c26d30032de40fab735306807b165467718fde59"
+    },
+    {
+      "path": "SUBMISSION.md",
+      "bytes": 3479,
+      "sha256": "7fec4b16ebf0da4ffe8fc3b63b2d9cd8da88307f3c360e2e4d86529859d5074c"
+    },
+    {
+      "path": "app/__init__.py",
+      "bytes": 60,
+      "sha256": "8b93f12926543dad68634763837a60fb0e14aa851085031fbb92dfb3f2ba7372"
+    },
+    {
+      "path": "app/agent.py",
+      "bytes": 24714,
+      "sha256": "f8bcb8690a08174fcb890fc069429fa53672a52b2e369478ccc945d35ba4c5cd"
+    },
+    {
+      "path": "app/chatgpt_auth.py",
+      "bytes": 15913,
+      "sha256": "2c685dbfa6b797ec133da71d62305ffefd7eebacc213bc94acc38ddb4c1d77bc"
+    },
+    {
+      "path": "app/provider.py",
+      "bytes": 12046,
+      "sha256": "764d9e76863cbc0aabc2c8d68e00abd6986573bb296972f249cab1451c8e5325"
+    },
+    {
+      "path": "app/server.py",
+      "bytes": 12608,
+      "sha256": "d2c795822bb4e9aebbb807cc9bf050c19a327403562c89d0c81dae47bc247201"
+    },
+    {
+      "path": "app/store.py",
+      "bytes": 1360,
+      "sha256": "2b3fe4eb5cb6441304c66027afbe7f3241a996fb82a655b5a57cfe6c6109e9ec"
+    },
+    {
+      "path": "app/tools.py",
+      "bytes": 3495,
+      "sha256": "261d9f071b53df0ee98f0fa16097d0acadbfcb1954d1604a0546e44324a8d455"
+    },
+    {
+      "path": "data/fixtures.json",
+      "bytes": 6193,
+      "sha256": "bad41867425f23d7fbabf50c41edc8e955061043be9940a56b93bce27908ec47"
+    },
+    {
+      "path": "docs/AI_USAGE.md",
+      "bytes": 1853,
+      "sha256": "7edb538f366a60cf1fcc2122b0aa0369d43564cc0fe66751d9002ab7d25c8991"
+    },
+    {
+      "path": "docs/DESIGN_DECISIONS.md",
+      "bytes": 2012,
+      "sha256": "7998b4aed08d13a04075e6f5f739a059386e301f8af540cb4c2b552043e7d128"
+    },
+    {
+      "path": "docs/PACKAGE_VALIDATION.md",
+      "bytes": 1312,
+      "sha256": "64718076d9ca7a56d4f726bd18e9ad5575d3df67e379f3e7e0f4de0c5eb8e13b"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 5217,
+      "sha256": "442a7aca23b453d12ba99db9114193c2d7610ced69714d14f3977f2c722371a6"
+    },
+    {
+      "path": "docs/chatgpt-connected.jpg",
+      "bytes": 21575,
+      "sha256": "0c1bf0a536ee4e17da06e2b9289278f5d3fbc64c3ef3c2b051347e934db7f2ed"
+    },
+    {
+      "path": "docs/demo-preview.jpg",
+      "bytes": 72502,
+      "sha256": "3e8f24862a589d72617c3938852484cc9fcd3f9e9b8aa27a1f84fa01bba9ac19"
+    },
+    {
+      "path": "docs/example-handoff.json",
+      "bytes": 6487,
+      "sha256": "583bb1713def9c642e2d468516af89ead58cbe458a430cd01b4780237376a5c9"
+    },
+    {
+      "path": "docs/新增真实模型测试报告-2026-10-22.md",
+      "bytes": 5310,
+      "sha256": "293cd0c55fba6c3d74deb04ea43d247501e6cb18455d79d16337da576ce3fbb3"
+    },
+    {
+      "path": "docs/用一个VPN问题理解项目.md",
+      "bytes": 4950,
+      "sha256": "ee7fde0a63574afe37161e0addce619206f9651ec2a0eec9c85897bd7414b06a"
+    },
+    {
+      "path": "docs/面试讲解与演示.md",
+      "bytes": 8311,
+      "sha256": "9c38d23926ead0aa8fc804fba76fea1a127f3c1ef737aa4c5aff0a1d93e57177"
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 2283,
+      "sha256": "e38c9f073f19a931f75b6a5366b68ce1e94a43443c02b38da3120e7b8e9e1a8c"
+    },
+    {
+      "path": "evaluate_extended.py",
+      "bytes": 6042,
+      "sha256": "990cae2dd7291aabfb05b93b2e01c056f032f30f825df619b5a0ce0b8cf98a6d"
+    },
+    {
+      "path": "evaluation/cases.json",
+      "bytes": 2904,
+      "sha256": "648ff841af05152f286d3905dc2c0fd6a584932dacd33d37e969ca69faf731db"
+    },
+    {
+      "path": "evaluation/chatgpt-smoke.json",
+      "bytes": 1923,
+      "sha256": "0de051da30d32cb0cc249946955ae49588fd37a5d360444234fb465c42adc6aa"
+    },
+    {
+      "path": "evaluation/demo-report-2026-10-21.json",
+      "bytes": 75987,
+      "sha256": "ce1a3e5e948f619e52c0e2ba0d92d07f45b0fb3e4130b9f50526c956b7490937"
+    },
+    {
+      "path": "evaluation/demo-report-after-extended-fixes-2026-10-21.json",
+      "bytes": 75987,
+      "sha256": "4a5e06b6faac91a315d2df93191d0e5a15ef48d999a93200d3df71c5cda782f5"
+    },
+    {
+      "path": "evaluation/demo-report-after-transport-fixes-2026-10-22.json",
+      "bytes": 75990,
+      "sha256": "3b69398dcbae4e4bd02bf84be928d969ed1589ba5b1250af446692acc6c6981c"
+    },
+    {
+      "path": "evaluation/demo-report.json",
+      "bytes": 75989,
+      "sha256": "faf2af9163830ec101dd1a535741a58f7d88d69310f960e52afffb78c6bdebce"
+    },
+    {
+      "path": "evaluation/extended-cases.json",
+      "bytes": 4702,
+      "sha256": "a2f7a6310aaf798f0b38c6dd95d46156a9763c8d38ef9c66d12345320bf9216d"
+    },
+    {
+      "path": "evaluation/extended-initial-2026-10-21.json",
+      "bytes": 111477,
+      "sha256": "44401fe28ddfc565eafb21db370901719cffc76c2faae74cc5c37f187bf16ec8"
+    },
+    {
+      "path": "evaluation/extended-retest-2026-10-21.json",
+      "bytes": 35669,
+      "sha256": "d4ed76ccd5c4fdbb7eacd5ff6f4ed81319e27ed7f8fd39c2ef095eef9f9d84d6"
+    },
+    {
+      "path": "evaluation/extended-summary-2026-10-22.json",
+      "bytes": 6812,
+      "sha256": "f8d0ed0d7b1c241fd5a23f4519dc827e8542247470273d950f082ce3fc5c211e"
+    },
+    {
+      "path": "evaluation/extended-transport-retest-2026-10-22.json",
+      "bytes": 19122,
+      "sha256": "2f5add5ca05a3926652bb9e48d819ec6215d0b6256b4253cb2786c42521c52fa"
+    },
+    {
+      "path": "evaluation/package-demo-report-2026-10-22.json",
+      "bytes": 75987,
+      "sha256": "ff1b4ef61ec6916637ab5bb96b6776011d166b58309a6fdd1a9412964b0be6a7"
+    },
+    {
+      "path": "evaluation/package-unit-results-2026-10-22.txt",
+      "bytes": 3377,
+      "sha256": "e760fce2425e8fd38e21c70633dbd81574fdfa9d0f044e0dc31ebf89d0ab13ad"
+    },
+    {
+      "path": "evaluation/test-results.txt",
+      "bytes": 3377,
+      "sha256": "e15b97067852ff48d14010e8199fd43a6af8b7109f22cef40f8925768bd120c4"
+    },
+    {
+      "path": "evaluation/verification-2026-10-21.json",
+      "bytes": 2939,
+      "sha256": "82d91b1389859d96a6cf933973a3c4bb97504d5ee20e626a7cab69cb4139abba"
+    },
+    {
+      "path": "evaluation/vpn-walkthrough-2026-10-22.json",
+      "bytes": 31729,
+      "sha256": "c12dd534b42f1d1f7a3d520b027613b01f4bcf4e0917b1a2461385a84bdb2b3b"
+    },
+    {
+      "path": "requirements-chatgpt.txt",
+      "bytes": 89,
+      "sha256": "bdfa1a70d652aa83846f6b724774827a6a28342cf617c48b4d93de352eb06014"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 113,
+      "sha256": "1f3382167269ddd91c6a1206096ef93784b4ba201257a759bf7e3f036c57ca29"
+    },
+    {
+      "path": "tests/test_agent.py",
+      "bytes": 9860,
+      "sha256": "42bf6bccb8ded81c1cf08067e69a08ee4dbfb60a1e7488c118600ad5bc608556"
+    },
+    {
+      "path": "tests/test_chatgpt.py",
+      "bytes": 13658,
+      "sha256": "332e968d0b003bd0d0f18a4535701dde47670006e345019237b83dff22250d24"
+    },
+    {
+      "path": "tests/test_http.py",
+      "bytes": 3599,
+      "sha256": "27ac4095f9fa08fc5ded37c78e276f5315241d20d325bf75134404a0a27a0cee"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 10839,
+      "sha256": "a49798499c288d9ab18daba125f2073b43adb06ae20849e81648a5d0279868b1"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 4527,
+      "sha256": "8bbbad1a10d7db20796cc617189831d1ed23d2a2afa3d734cd111a5006a03b08"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 6173,
+      "sha256": "20e21c181d8364fd802233c7bb5fc0d2292dd84a0e5e00149be17021209c52e9"
+    }
+  ]
+}

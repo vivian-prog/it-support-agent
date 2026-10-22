@@ -1,0 +1,2 @@
+# Python >=3.9. Demo/API Key: standard library only.
+# Optional ChatGPT OAuth: install requirements-chatgpt.txt.
