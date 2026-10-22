@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>员工 IT 支持</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/"><span class="mark">it</span><span>IT 支持<small>员工服务</small></span></a><span class="mode" id="mode">连接中</span></header>
+<main>
+<section class="workspace">
+<div class="intro"><h1>把遇到的问题发过来</h1><p>登录不上、VPN 断线，或者内网打不开，都可以在这里描述。<br class="desktop">先试着排查，解决不了再把情况整理给 IT。</p></div>
+<div class="sessionbar"><span id="employee">选择一位模拟员工</span><span id="phase">准备开始</span></div>
+<div id="messages" aria-live="polite" aria-label="对话记录"></div>
+<div class="starters" id="starters"><button data-prompt="我在家远程办公，VPN 每隔 10–15 分钟就断线，30分钟后要开客户会议。">VPN 频繁断线 <span>↗</span></button><button data-prompt="我在家，VPN 显示已连接，但 Grafana 内网打不开。">内网打不开 <span>↗</span></button><button data-prompt="我刚加入团队，需要开通 Snowflake 生产数据库权限。">申请应用权限 <span>↗</span></button></div>
+<div id="error" role="alert"></div>
+<form id="chat-form"><label class="sr-only" for="message">描述你的 IT 问题</label><textarea id="message" maxlength="2000" rows="2" placeholder="比如：VPN 每隔十几分钟就会断一次"></textarea><button id="send" type="submit" aria-label="发送消息">↑</button></form>
+<p class="privacy">别发送密码、验证码或公司敏感信息。这里用的是模拟数据。</p>
+</section>
+<aside>
+<section class="panel connection"><h2>模型连接</h2>
+<label for="connection">接入方式</label><select id="connection"><option value="chatgpt">ChatGPT 登录授权</option><option value="openai">OpenAI API Key</option><option value="demo">规则演示（不调用模型）</option></select>
+<div id="chatgpt-settings"><p class="muted">登录后授权此应用使用你的 ChatGPT 额度。测试对话和模拟资料会发送给 OpenAI。</p>
+<label for="chatgpt-account" class="hidden" id="account-label">ChatGPT 账号</label><select id="chatgpt-account" class="hidden"></select>
+<button id="chatgpt-login" class="secondary">Continue with ChatGPT</button>
+<button id="enable-plan" class="secondary hidden">授权使用订阅额度</button>
+<button id="add-account" class="secondary hidden">添加另一个 ChatGPT 账号</button>
+<label for="chatgpt-model" class="hidden" id="model-label">模型</label><select id="chatgpt-model" class="hidden"></select>
+<button id="refresh-models" class="secondary hidden">重新获取模型</button>
+<a href="https://chatgpt.com/settings/usage" target="_blank" rel="noopener noreferrer" id="usage-link" class="hidden muted">查看 ChatGPT 用量与授权</a>
+<button id="chatgpt-disconnect" class="secondary hidden">断开当前账号</button>
+</div>
+<p id="api-key-settings" class="muted hidden"></p>
+<p id="connection-status" class="muted" aria-live="polite"></p>
+<button id="apply-connection" class="secondary">使用这个连接，开始新会话</button>
+</section>
+<section class="panel"><h2>处理进度</h2><div class="facts" id="facts"><p>发送问题后，这里会显示排查进度。</p></div><button id="human" class="secondary">转人工处理</button><a id="handoff" class="download hidden" href="/api/handoff" download="it-handoff.json">下载问题和排查记录 ↓</a><p id="handoff-note" class="hidden muted">记录还没发给 IT，下载后可以交给支持人员。</p></section>
+<section class="panel"><details id="trace-details"><summary>排查记录 <span id="tool-count">0</span></summary><p class="muted">这里可以查看查过的资料和返回结果。</p><div id="trace"></div></details></section>
+<section class="panel lab"><details><summary>演示设置</summary><p class="muted">选好员工和场景后，点“开始新会话”。这里的身份只用于演示，没有连接公司账号。</p><label for="user">模拟员工</label><select id="user"></select><label for="lab">演示场景</label><select id="lab"></select><button id="new-session" class="secondary">开始新会话</button><p class="muted" id="clock"></p></details></section>
+</aside>
+</main>
+<footer>员工 IT 支持 <span>本地演示 · 使用模拟数据</span></footer>
+</body></html>
